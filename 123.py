@@ -100,4 +100,9 @@ info( '*** Starting network\n')
 	    net.get(str(i)).start([c2])
 
     info( '*** Post configure switches and hosts\n')
-  
+    CLI(net)
+    net.stop()
+
+if __name__ == '__main__':
+    setLogLevel( 'info' )
+    myNetwork()
