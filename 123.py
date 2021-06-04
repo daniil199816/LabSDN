@@ -113,6 +113,15 @@ def myNetwork():
 
     
 
+def simpleTest():
+   net.start()
+   print "Dumping host connections"
+   dumpNodeConnections(net.hosts)
+   print "Testing network connectivity"
+   net.pingAll()
+   net.stop()
+
 if __name__ == '__main__':
-    setLogLevel( 'info' )
-    myNetwork()
+   # Tell mininet to print useful information
+   setLogLevel('info')
+   simpleTest()
