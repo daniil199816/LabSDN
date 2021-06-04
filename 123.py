@@ -114,6 +114,8 @@ def myNetwork():
     
 
 def simpleTest():
+   
+   net = Mininet(topo)
    net.start()
    print "Dumping host connections"
    dumpNodeConnections(net.hosts)
