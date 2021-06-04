@@ -1,3 +1,34 @@
+Skip to content
+Why GitHub? 
+Team
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+praneet195
+/
+Mininet-Topology-Generator
+10
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Mininet-Topology-Generator/topogen.py /
+
+Praneet Singh Add files via upload
+Latest commit 587fc3e on 11 Mar 2019
+ History
+ 0 contributors
+120 lines (85 sloc)  2.63 KB
+  
 #!/usr/bin/python
 
 from mininet.net import Mininet
@@ -77,9 +108,19 @@ def myNetwork():
 	del hosts[:perswitch]
 
 
-#
+#	
 
-info( '*** Starting network\n')
+
+	
+	    
+
+
+
+
+
+
+
+    info( '*** Starting network\n')
     net.build()
     info( '*** Starting controllers\n')
     for controller in net.controllers:
@@ -100,9 +141,6 @@ info( '*** Starting network\n')
 	    net.get(str(i)).start([c2])
 
     info( '*** Post configure switches and hosts\n')
-    CLI(net)
-    net.stop()
 
-if __name__ == '__main__':
-    setLogLevel( 'info' )
-    myNetwork()
+   
+
