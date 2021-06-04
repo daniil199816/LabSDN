@@ -113,5 +113,8 @@ def myNetwork():
 
     info( '*** Post configure switches and hosts\n')
 
+if __name__ == '__main__':
+    setLogLevel( 'info' )
+    myNetwork()
    
 
