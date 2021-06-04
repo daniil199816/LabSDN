@@ -10,8 +10,6 @@ from mininet.log import setLogLevel, info
 from mininet.link import TCLink, Intf
 from subprocess import call
 import sys
-class Topo(Topo):
-   "Linear topology of k switches, with one host per switch."
 def myNetwork():
 
     net = Mininet( topo=None,
@@ -113,19 +111,9 @@ def myNetwork():
 
     info( '*** Post configure switches and hosts\n')
 
-    
-
-def simpleTest():
-   
-   net = Mininet(topo)
-   net.start()
-   print "Dumping host connections"
-   dumpNodeConnections(net.hosts)
-   print "Testing network connectivity"
-   net.pingAll()
-   net.stop()
+    CLI(net)
+    net.stop()
 
 if __name__ == '__main__':
-   # Tell mininet to print useful information
-   setLogLevel('info')
-   simpleTest()
+    setLogLevel( 'info' )
+    myNetwork()
