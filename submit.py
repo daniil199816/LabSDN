@@ -1,11 +1,11 @@
 
 #!/usr/bin/python
-from mininet.topo importTopo
-from mininet.net importMininet
-from mininet.node importCPULimitedHost
-from mininet.link importTCLink
-from mininet.util importirange,dumpNodeConnections
-from mininet.log importsetLogLevel
+from mininet.topo import Topo
+from mininet.net import Mininet
+from mininet.node import CPULimitedHost
+from mininet.link import TCLink
+from mininet.util import irange,dumpNodeConnections
+from mininet.log import setLogLevel
 classLinearTopo(Topo):
 "Linear topology of k switches, with one host per switch."
 def__init__(self, k=2, **opts):
