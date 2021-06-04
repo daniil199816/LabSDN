@@ -79,5 +79,25 @@ def myNetwork():
 
 #
 
+info( '*** Starting network\n')
+    net.build()
+    info( '*** Starting controllers\n')
+    for controller in net.controllers:
+        controller.start()
 
+    info( '*** Starting switches\n')
+    net.get('s999').start([c0])
+    net.get('s998').start([c0])
+    net.get('s997').start([c0])
+
+    
+    scount=0
+    for i in switches:
+	if scount<int( numswitches/2):
+	    net.get(str(i)).start([c1])
+	    scount+=1
+	else:
+	    net.get(str(i)).start([c2])
+
+    info( '*** Post configure switches and hosts\n')
   
